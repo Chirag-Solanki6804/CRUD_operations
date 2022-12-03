@@ -1,0 +1,35 @@
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+    <table>
+      <tr>
+        <td>Enter Name</td>
+        <td>:</td>
+        <td><input type="text" formControlName="name"></td>
+      </tr>
+      <tr>
+        <td>Enter Age</td>
+        <td>:</td>
+        <td><input type="text" formControlName="age"></td>
+      </tr>
+      <tr>
+        <td colspan="3" *ngIf="idToEdit==-1"><input type="submit" value="Add Data" /></td>
+        <td colspan="3" *ngIf="idToEdit!=-1"><input type="submit" value="Edit Data" /></td>
+      </tr>
+    </table>
+  </form>
+  <br />
+  <br />
+  
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let fac of faculties; let i=index">
+      <td>{{fac.Booktitle}}</td>
+      <td>{{fac.BookAuthor}}</td>
+      <td><button (click)="setValueForEdit(i)">Edit</button></td>
+      <td><button (click)="delete(i)">Delete</button></td>
+    </tr>
+  </table>

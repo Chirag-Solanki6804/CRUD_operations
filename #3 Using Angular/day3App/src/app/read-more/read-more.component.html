@@ -1,0 +1,30 @@
+<div class="container bcontent" style="width: 100%;">
+  <h2
+    style="text-align:center; font-weight: 700; font-family: 'Times New Roman', Times, serif; color: red; margin-top: 20px;">
+    {{data.Booktitle}}</h2>
+  <button routerLink='/books' class="btn btn-primary">Back</button>
+  <hr />
+  <div class="card" style="width: 100%;">
+    <div class="row no-gutters">
+      <div class="col-sm-5">
+        <img style="width:400px; height:500px ;" class="card-img" [src]="data.BookImage">
+      </div>
+      <div class="col-sm-7">
+        <div class="card-body">
+          <!-- <h5 class="card-title">Suresh Dasari</h5> -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Author</b> : {{data.BookAuthor}}</li>
+            <li class="list-group-item"><b>Pages</b> : {{data.bookNoOfPages}}</li>
+            <li class="list-group-item"><b>Price</b> : {{data.BookPrice}}</li>
+          </ul>
+          <hr>
+          <p class="card-text"><b>Description : </b><br /> {{data.BookDescription}}</p>
+        </div>
+        <div class="card-body">
+          <button routerLink='/books/edit/{{data.id}}' style="margin-right: 40px;" class="btn btn-warning">Edit</button>
+          <button (click)="Delete()" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

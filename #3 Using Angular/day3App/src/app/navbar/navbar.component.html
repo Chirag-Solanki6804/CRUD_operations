@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <img style="width: 100px; margin:0px 50px 0px 30px"
+    src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/sergeypykhonin180900041.jpg?ver=6"
+    alt="book logo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a style="margin-right: 50px;" class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a style="margin-right:50px" class="nav-link" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a style="margin-right:50px" class="nav-link" routerLink="/arraycrud">ArrayCrud</a>
+      </li>
+    </ul>
+
+    <!-- Dropdown For Book-Store -->
+
+    <div class="dropdown bg-dark">
+      <button class="dropbtn bg-dark">📘Book Store</button>
+      <div class="dropdown-content" style="width: 200px;">
+        <a class="nav-link" routerLink="/books">👉Book collection</a>
+        <a class="nav-link" routerLink="/books/add">👉Add New Book</a>
+      </div>
+    </div>
+  </div>
+</nav>

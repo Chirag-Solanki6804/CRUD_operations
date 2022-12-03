@@ -1,0 +1,12 @@
+<div class="container" >
+  <div class="row" >
+    <div class="card col-3" *ngFor="let b of data;let id=index" style="margin:20px 0px 40px 0px">
+        <img style="height: 400px;" class="card-img-top"  [src]="b.BookImage" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{b.Booktitle}}</h5>
+          <a [routerLink]="[ './readMore',this.id]" class="btn btn-primary">Read more</a>
+        </div>
+     </div>
+     <br>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<form style="margin-top: 50px;" [formGroup]="myForm" (ngSubmit)="insert()">
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationDefaultUsername"><b>Book ID</b></label>
+            <div class="input-group">
+                <input formControlName="id" type="text" class="form-control" id="validationDefaultUsername"
+                    placeholder="Enter Book ID" aria-describedby="inputGroupPrepend2" required>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefault01"><b>Book-Title</b></label>
+            <input formControlName="Booktitle" type="text" class="form-control" id="validationDefault01"
+                placeholder="Enter Book title" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefault02"><b>Author</b></label>
+            <input formControlName="BookAuthor" type="text" class="form-control" id="validationDefault02"
+                placeholder="Enter Book Author" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefaultUsername"><b>Price</b></label>
+            <div class="input-group">
+                <input formControlName="BookPrice" type="text" class="form-control" id="validationDefaultUsername"
+                    placeholder="Enter Book Price" aria-describedby="inputGroupPrepend2" required>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationDefault03"><b>Image</b></label>
+            <input formControlName="BookImage" type="text" class="form-control" id="validationDefault03"
+                placeholder="Enter Image Url" required>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault04"><b>Number Of Pages</b></label>
+            <input formControlName="bookNoOfPages" type="text" class="form-control" id="validationDefault04"
+                placeholder="Enter Number Of Pages" required>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault05"><b>Description</b></label>
+            <textarea formControlName="BookDescription" style="border-radius: 5%;" cols="30" rows="10"
+                placeholder="Enter Book Description"></textarea>
+        </div>
+    </div>
+    <input class="btn btn-primary" type="submit" [value]="btnName">
+</form>
